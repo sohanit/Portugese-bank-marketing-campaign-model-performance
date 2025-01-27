@@ -89,18 +89,40 @@ The performance of the classifiers was evaluated based on various metrics. Here 
 Optimized model performance comparisons:
 
 
-| **Model**              | **Best Parameters**                  | **Best CV Score (F1)** | **Test Score (F1)** | **Accuracy** | **Precision** | **Recall** | **F1-Score** |
-|-------------------------|---------------------------------------|-------------------------|----------------------|--------------|---------------|------------|--------------|
-| **Logistic Regression** | `{'C': 10, 'solver': 'lbfgs'}`       | 0.5114                 | 0.5173               | 0.9098       | 0.6644        | 0.4150     | 0.5109       |
-| **KNN**                | `{'n_neighbors': 7, 'weights': 'uniform'}` | 0.5442                 | 0.5335               | 0.9098       | 0.6644        | 0.4150     | 0.5109       |
-| **Decision Tree**       | `{'max_depth': 7, 'min_samples_split': 2}` | 0.5914                 | 0.5910               | 0.9098       | 0.6644        | 0.4150     | 0.5109       |
-| **SVM**                | `{'C': 1, 'kernel': 'linear'}`       | 0.4765                 | 0.5024               | 0.9098       | 0.6644        | 0.4150     | 0.5109       |
+| **Model**              | **Best Parameters**                  | **Best CV Score** | **Test Score** | **Accuracy** | **F1 Score** | **Precision** | **Recall** |
+|-------------------------|---------------------------------------|-------------------|----------------|--------------|--------------|---------------|------------|
+| Logistic Regression     | {'C': 1, 'solver': 'saga'}          | 0.5126            | 0.2039         | 0.9114       | 0.5247       | 0.6705        | 0.4310     |
+| KNN                     | {'n_neighbors': 3, 'weights': 'distance'} | 0.4200            | 0.2050         | 0.8920       | 0.4410       | 0.5342        | 0.3754     |
+| Decision Tree           | {'max_depth': 3, 'min_samples_split': 2} | 0.5881            | 0.2039         | 0.9090       | 0.5959       | 0.6004        | 0.5914     |
+| SVM                     | {'C': 10, 'kernel': 'rbf'}          | 0.5057            | 0.0000         | 0.9084       | 0.5525       | 0.6197        | 0.4984     |
 
-### **Notes on the Table:**
-- **Best CV Score (F1):** Average F1-score from cross-validation during grid search.
-- **Test Score (F1):** F1-score achieved on the test set after training with the best parameters.
-- **Accuracy, Precision, Recall, and F1-Score:** Same values across models because predictions for the majority class (`y=0`) dominate due to imbalance in the dataset.
 
+### Summary of Model Performance:
+
+1. **Logistic Regression**:
+   - Achieved the **highest accuracy** (91.14%) and performed relatively well across metrics.
+   - The **best F1 score** was 0.5247, with good precision (0.6705) but a lower recall (0.4310).
+   - Tuned with parameters `C=1` and `solver='saga'`.
+
+2. **KNN (K-Nearest Neighbors)**:
+   - Showed the **lowest performance overall**, with an accuracy of 89.20% and an F1 score of 0.4410.
+   - Precision (0.5342) and recall (0.3754) were weaker compared to other models.
+   - Optimal parameters were `n_neighbors=3` and `weights='distance'`.
+
+3. **Decision Tree**:
+   - Performed reasonably well, achieving an F1 score of 0.5959, **highest recall** (0.5914), and good precision (0.6004).
+   - Accuracy was 90.90%, slightly lower than Logistic Regression.
+   - Best parameters were `max_depth=3` and `min_samples_split=2`.
+
+4. **SVM (Support Vector Machine)**:
+   - Demonstrated moderate performance, with an accuracy of 90.84% and an F1 score of 0.5525.
+   - Precision (0.6197) was good, but recall (0.4984) lagged slightly.
+   - Best parameters were `C=10` and `kernel='rbf'`.
+
+### Key Observations:
+- Logistic Regression and Decision Tree models emerged as strong performers for this dataset.
+- KNN lagged behind significantly in overall performance, particularly in recall and F1 scores.
+- SVM showed balanced performance but did not surpass the Decision Tree or Logistic Regression in key metrics.
 
 For detailed results and analysis, please refer to the [model-predictions.ipynb](https://github.com/sohanit/Portugese-bank-marketing-campaign-model-performance/blob/main/model-predictions.ipynb) notebook.
 
