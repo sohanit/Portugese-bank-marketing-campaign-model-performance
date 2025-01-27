@@ -78,51 +78,17 @@ Ultimately, this analysis will enable the bank to make data-driven decisions to 
 ## Summary of Findings
 The performance of the classifiers was evaluated based on various metrics. Here is a brief summary of the findings:
 
-Baseline Performance Accuracy: 0.887556904400607
-Linear Regression basic model findings:
+- Baseline Performance Accuracy: 0.887556904400607
+  
+- Linear Regression basic model findings:
 - Accuracy: 0.9098
 - Precision: 0.6644
 - Recall: 0.4150
 - F1-score: 0.5109
 
 Optimized model performance comparisons:
-- **K-Nearest Neighbors**:
-    Best Parameters: {'n_neighbors': 7, 'weights': 'uniform'}
-    Best CV Score: 0.5442
-    Test Score: 0.5335
-    Accuracy: 0.9098
-    F1 Score: 0.5109
-    Precision: 0.6644
-    Recall: 0.4150
 
-- **Logistic Regression**:
-    Best Parameters: {'C': 10, 'solver': 'lbfgs'}
-    Best CV Score: 0.5114
-    Test Score: 0.5173
-    Accuracy: 0.9098
-    F1 Score: 0.5109
-    Precision: 0.6644
-    Recall: 0.4150
-
-- **Decision Trees**:
-    Best Parameters: {'max_depth': 7, 'min_samples_split': 2}
-    Best CV Score: 0.5914
-    Test Score: 0.5910
-    Accuracy: 0.9098
-    F1 Score: 0.5109
-    Precision: 0.6644
-    Recall: 0.4150
-
-- **Support Vector Machines**:
-    Best Parameters: {'C': 1, 'kernel': 'linear'}
-    Best CV Score: 0.4765
-    Test Score: 0.5024
-    Accuracy: 0.9098
-    F1 Score: 0.5109
-    Precision: 0.6644
-    Recall: 0.4150
-
-For detailed results and analysis, please refer to the [Comparing-Performances.ipynb](http://_vscodecontentref_/0) notebook.
+For detailed results and analysis, please refer to the [model-predictions.ipynb](https://github.com/sohanit/Portugese-bank-marketing-campaign-model-performance/blob/main/model-predictions.ipynb) notebook.
 
 ## Results:
 
