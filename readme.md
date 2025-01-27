@@ -88,10 +88,6 @@ The performance of the classifiers was evaluated based on various metrics. Here 
 
 Optimized model performance comparisons:
 
-For detailed results and analysis, please refer to the [model-predictions.ipynb](https://github.com/sohanit/Portugese-bank-marketing-campaign-model-performance/blob/main/model-predictions.ipynb) notebook.
-
-## Results:
-
 
 | **Model**              | **Best Parameters**                  | **Best CV Score (F1)** | **Test Score (F1)** | **Accuracy** | **Precision** | **Recall** | **F1-Score** |
 |-------------------------|---------------------------------------|-------------------------|----------------------|--------------|---------------|------------|--------------|
@@ -105,6 +101,8 @@ For detailed results and analysis, please refer to the [model-predictions.ipynb]
 - **Test Score (F1):** F1-score achieved on the test set after training with the best parameters.
 - **Accuracy, Precision, Recall, and F1-Score:** Same values across models because predictions for the majority class (`y=0`) dominate due to imbalance in the dataset.
 
+
+For detailed results and analysis, please refer to the [model-predictions.ipynb](https://github.com/sohanit/Portugese-bank-marketing-campaign-model-performance/blob/main/model-predictions.ipynb) notebook.
 
 ## Contribution Guidelines
 If you would like to contribute to this project, please fork the repository and submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
