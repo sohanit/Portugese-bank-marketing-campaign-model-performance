@@ -81,10 +81,10 @@ The performance of the classifiers was evaluated based on various metrics. Here 
 - Baseline Performance Accuracy: 0.887556904400607
   
 - Linear Regression basic model findings:
-- Accuracy: 0.9098
-- Precision: 0.6644
-- Recall: 0.4150
-- F1-score: 0.5109
+  - Accuracy: 0.9098
+  - Precision: 0.6644
+  - Recall: 0.4150
+  - F1-score: 0.5109
 
 Optimized model performance comparisons:
 
